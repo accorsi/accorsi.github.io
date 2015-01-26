@@ -128,48 +128,18 @@ a {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    -webkit-font-smoothing: antialiased; 
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
-    border-bottom: 2px;
-}
+    border-bottom: 2px solid transparent;
+    padding: 0 0 2px 0;
+    }
 
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #218de0;
-}
-
-.hover a:before{
-    position: absolute;
-    top: -5px;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 130%;
-    background: #218de0;
-    content: '';
-    -o-transition: -o-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    -o-transform: scaleY(0.618) translateX(-100%);
-    -ms-transform: scaleY(0.618) translateX(-100%);
-    -moz-transform: scaleY(0.618) translateX(-100%);
-    -webkit-transform: scaleY(0.618) translateX(-100%);
-    transform: scaleY(1) translateX(-100%);
-}
-
-.hover a:before:hover{
-    -o-transition: -o-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    -o-transform: scaleY(0.618) translateX(100%);
-    -ms-transform: scaleY(0.618) translateX(100%);
-    -moz-transform: scaleY(0.618) translateX(100%);
-    -webkit-transform: scaleY(0.618) translateX(100%);
-    transform: scaleY(1) translateX(100%);
+    color: #E0352F;
+    border-bottom: 2px solid;
 }
 
 .light {
@@ -232,10 +202,6 @@ a:focus {
 
 .navbar-custom .navbar-brand a {
     margin-top: 21px;
-}
-.navbar-nav{
-    margin: 0;
-    width: 100%;
 }
 .navbar-custom .navbar-brand svg {
     margin-right: 3px;  
@@ -324,7 +290,6 @@ a:focus {
         text-align: left;
         letter-spacing: -0.02em;
     }
-    }
     .navbar {
         padding: 0;
         border-bottom: 0;
@@ -335,7 +300,9 @@ a:focus {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
     .navbar-nav{
-        margin: 0px 15px;
+        padding: 0;
+        text-align: center;
+        height: 55px;
     }
     .navbar-custom .navbar-right a {
         font-weight: 700;
@@ -368,7 +335,7 @@ a:focus {
     }
     .navbar-nav>li {
         float: left;
-        margin: 15px 0px 0px 19px!important;
+        margin: 16px 0px 0px 29px!important;
         }
 
     .navbar-custom {
@@ -377,7 +344,7 @@ a:focus {
         font-family: "brandon-grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
         background: #181818;
         /* color: white!important; */
-}
+    }
     .navbar-custom a,
     .navbar-custom svg{
         color: #fff;
@@ -744,7 +711,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 }
 
 .content-section {
-    padding: 150px 0;
+    padding-top: 110px;
 }
 
 .download-section {
@@ -790,12 +757,6 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     padding: 10px 10px;
     text-align: center;
 }
-.btn-block{
-    display: block;
-    width: 90%;
-    text-align: center;
-    margin: 30px auto;
-}
 
 .btn-default {
     border: 2px solid #181818;
@@ -810,7 +771,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     border: 2px solid #181818;
     outline: 0;
     color: #000;
-    background-color: #ff3d35;
+    background-color: transparent;
 }
 
 ul.banner-social-buttons {
@@ -819,18 +780,17 @@ ul.banner-social-buttons {
 
 ul.banner-social-buttons li {
     display: block;
-    margin: 0px;
-    padding: 0px;
+    margin: 9px;
+    padding: 0;
     float: left;
 }
 
 .btn-social{
-    padding: 12px 0 0 13px;
-    font-size: 3.998em;
+    padding: 25px 0 0 10px;
+    font-size: 2.998em;
     width: 128px;
     height: 128px;
     text-align: center;
-    margin: 9px;
 }
 
 @media(max-width:1199px) {
@@ -839,14 +799,6 @@ ul.banner-social-buttons li {
 
 @media(max-width:767px) {
     ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 3px;
-        padding: 0 0 0 14px;
-        float: left;
-        width: 47%;
-        margin-top: 15px;
-        margin-left: 23px;
-    }
     }
 
     ul.banner-social-buttons li:last-child {
