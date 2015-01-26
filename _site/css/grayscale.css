@@ -63,7 +63,6 @@ p {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
-    letter-spacing: -0.02em;
 }
 
 blockquote {
@@ -107,7 +106,7 @@ blockquote footer {
     display: block;
     line-height: 1.414em;
     text-align: left;
-    padding: 20px;
+    padding: 0 0 0 36px;
     font-weight: 500;
     font-weight: 700;
     /* text-align: right; */
@@ -128,18 +127,16 @@ a {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
-    border-bottom: 2px solid transparent;
-    padding: 0 0 2px 0;
-    }
+    padding: 3px;
+}
 
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #E0352F;
-    border-bottom: 2px solid;
+    color: #fff;
+    padding: 3px;
+    background: #181818;
 }
 
 .light {
@@ -208,6 +205,8 @@ a:focus {
     top: 6px;
     position: relative;
     fill: #fff;
+    width: 23px;
+    height: 23px;
 }
 .navbar-custom .navbar-brand:focus {
     outline: 0;
@@ -400,19 +399,10 @@ a:focus {
 
 
 .intro .intro-body h2{
-/*    font-size: 1.618em;
-    color: #000000;
-    letter-spacing: 0.112em;
-    padding: 0 0 0 0.3em;
-    margin-bottom: 106px;
-    font-weight: 300;
-    line-height: 1.2em;*/
     font-size: 1.114em;
-    color: #000000;
+    color: #181818;
     letter-spacing: 0.24em;
     padding: 3px 0 0 0.3em;
-    
-
     margin-bottom: 76px;
     line-height: 1.4em;
 }
@@ -434,7 +424,7 @@ a:focus {
     display: block;
     z-index: 1;
     letter-spacing: -0.06em;
-    margin-bottom: -59px;
+    margin-bottom: -58px;
     font-weight: 500;
 }   
 
@@ -465,6 +455,7 @@ a:focus {
     .intro .intro-body .intro-text {
         font-size: 1.4em;
         margin-bottom: 1.618em;
+        line-height: 1.55em;
     }
     .intro .intro-body .simbolo{
         width: 6.868em;
@@ -479,7 +470,7 @@ a:focus {
         display: block;
         z-index: 1;
         letter-spacing: -0.06em;
-        margin: 0 0 -70px -6px;
+        margin: 0 0 -67px -2px;
         font-weight: 500;
     }
     .intro .btn-circle{
@@ -501,20 +492,22 @@ a:focus {
     transition: border .2s ease-in-out;
     margin: 0 auto 50px;
     color: #1c1920;
-    border: none;
+    border: 0px;
 }
 
 
 a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     border-color: transparent;
-    opacity: 0;
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
 }
 
 .thumbnail h1{
-    font-size: 1em;
+    font-size: 0.9em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    font-weight: 700;
+    font-weight: 900;
     margin: 15px 0px 0px;
     color: #181818;
 }
@@ -581,36 +574,23 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     height: 56px;
     margin-top: 40px;
     padding: 4px 0px!important;
-    border: 2px solid #181818;
+    border: 2px solid rgba(24, 24, 24, 0.29);
     border-radius: 35px;
     font-size: 19px;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
     background: transparent;
-    color: #181818;
+    color: rgba(24, 24, 24, 0.29);
     text-align: center;
 }
-.btn-circle.bright{
-    color: rgba(255,255,255, 0.4);
-    background: rgba(255,255,255, 0.1);
-}
-.btn-circle.dark{
-    color: rgba(0,0,0, 0.4);
-    background: rgba(0,0,0, 0.1);
-}
 
-.btn-circle.bright:hover,
-.btn-circle.bright:focus {
-    outline: 0;
-    background: rgba(255,255,255, 0.5);
-    color: white;
-}
-.btn-circle.dark:hover,
-.btn-circle.dark:focus {
-    outline: 0;
-    background: rgba(0,0,0, 0.5);
-    color: #181818;
+.btn-circle:hover,
+.btn-circle:active,
+.btn-circle:visited{
+    border: 2px solid rgba(24, 24, 24, 1);
+    color: rgba(24, 24, 24, 1);
+    background: transparent;
 }
 
 .btn-circle i.animated {
@@ -711,7 +691,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 }
 
 .content-section {
-    padding-top: 110px;
+    padding-top: 120px;
 }
 
 .download-section {
@@ -726,25 +706,8 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     -o-background-size: cover;
 }
 
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
-
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 200px;
-    }
 
-    .download-section {
-        padding: 100px 0;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
 }
 
 .btn {
@@ -754,8 +717,14 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    padding: 10px 10px;
+    padding: 10px 25px;
     text-align: center;
+}
+.btn:hover {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    padding: 10px 25px;
 }
 
 .btn-default {
@@ -775,36 +744,31 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 }
 
 ul.banner-social-buttons {
-    margin-top: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 ul.banner-social-buttons li {
-    display: block;
+    display: inline-block;
     margin: 9px;
     padding: 0;
-    float: left;
-}
-
-.btn-social{
-    padding: 25px 0 0 10px;
-    font-size: 2.998em;
-    width: 128px;
-    height: 128px;
     text-align: center;
 }
 
-@media(max-width:1199px) {
-
+ul.banner-social-buttons a.btn-social{
+    display: inline-block;
+    font-size: 2.998em;
+    width: 120px;
+    height: 120px;
+    padding: 18px 0;
+}
+ul.banner-social-buttons a.btn-social:hover,
+ul.banner-social-buttons a.btn-social:active,{
+    font-size: 3.998em;
+    padding: 25px 0 0 10px;
 }
 
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
-    }
-
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
-    }
-}
 
 footer {
     padding: 50px 0;
@@ -821,14 +785,14 @@ footer p {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: #181818;
+    background: rgba(24,24,24,.2);
 }
 
 ::selection {
     text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: #181818;
+    background: rgba(24,24,24,.2);
 }
 
 img::selection {
