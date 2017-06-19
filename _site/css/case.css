@@ -187,22 +187,29 @@ section#case blockquote footer cite{
         fill: #fff;
     }
     .intro-case .intro-body .brand-heading {
-        font-size: 4.236em;
+        font-size: 5.236em;
         line-height: 1em;
         margin: 2px 0 1px 0!important;
         /* letter-spacing: 0.1em; */
         color: #fff;
+        letter-spacing: 0;
     }
 
     .intro-case .intro-body h2{
-        font-size: 1.114em;
-        letter-spacing: 0.24em;
+        font-size: 2em;
+        letter-spacing: 0.025em;
         padding: 0 100px;
         margin: 8px 0 66px;
-        line-height: 1.4em;
+        line-height: 1em;
+        text-transform: none;
+        font-weight: 500;
     }
 
     .intro-case .intro-body a {
+        font-size: 1.2em;
+        color: #fff;
+        padding: 6px 10px;
+        line-height: 1.4em;
     }
 
     .intro-case .intro-body a:hover,
@@ -212,7 +219,7 @@ section#case blockquote footer cite{
 
     .intro-case .intro-body em {
         position: relative;
-        margin: 0 18px 0 4px;
+        margin: 0 21px 0 4px;
         right: -8px;
         color: #fff;
     }
